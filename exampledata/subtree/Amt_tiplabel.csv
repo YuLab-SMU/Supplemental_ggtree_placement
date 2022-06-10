@@ -1,0 +1,365 @@
+node,tiplabel,Group
+1,Asterochloris,Trebouxiophyceae
+2,Asterochloris,Trebouxiophyceae
+3,Coccomyxa,Trebouxiophyceae
+4,Stichococcus,Trebouxiophyceae
+5,Galdieria,Cyanidiales
+6,Galdieria,Cyanidiales
+7,Cyanidioschyzon,Cyanidiales
+8,Cyanidioschyzon,Cyanidiales
+9,Timspurckia,Non-Cyanidiales
+10,Erythrolobus,Non-Cyanidiales
+11,Erythrolobus,Non-Cyanidiales
+12,Porphyridium,Non-Cyanidiales
+13,Porphyridium,Non-Cyanidiales
+14,Porphyridium,Non-Cyanidiales
+15,Madagascaria,Non-Cyanidiales
+16,Porphyridium,Non-Cyanidiales
+17,Erythrolobus,Non-Cyanidiales
+18,Erythrolobus,Non-Cyanidiales
+19,Mallomonas,Non-Cyanidiales
+20,Timspurckia,Non-Cyanidiales
+21,Erythrolobus,Non-Cyanidiales
+22,Erythrolobus,Non-Cyanidiales
+23,Unidentified,Non-Cyanidiales
+24,Unidentified,Non-Cyanidiales
+25,Rhodosorus,Non-Cyanidiales
+26,Rhodosorus,Non-Cyanidiales
+27,Madagascaria,Non-Cyanidiales
+28,Unidentified,Non-Cyanidiales
+29,Rhodosorus,Non-Cyanidiales
+30,Rhodosorus,Non-Cyanidiales
+31,Chondrus,Non-Cyanidiales
+32,Pinus,Embryophyta
+33,Amborella,Embryophyta
+34,Nelumbo,Embryophyta
+35,Elaeis,Embryophyta
+36,Phoenix,Embryophyta
+37,Musa,Embryophyta
+38,Musa,Embryophyta
+39,Eucalyptus,Embryophyta
+40,Prunus,Embryophyta
+41,Prunus,Embryophyta
+42,Malus,Embryophyta
+43,Pyrus,Embryophyta
+44,Malus,Embryophyta
+45,Malus,Embryophyta
+46,Malus,Embryophyta
+47,Pyrus,Embryophyta
+48,Theobroma,Embryophyta
+49,Alternanthera,Embryophyta
+50,Alternanthera,Embryophyta
+51,Beta,Embryophyta
+52,Coffea,Embryophyta
+53,Medicago,Embryophyta
+54,Cicer,Embryophyta
+55,Phaseolus,Embryophyta
+56,Solanum,Embryophyta
+57,Solanum,Embryophyta
+58,Nicotiana,Embryophyta
+59,Erythranthe,Embryophyta
+60,Sesamum,Embryophyta
+61,Vitis,Embryophyta
+62,Vitis,Embryophyta
+63,Populus,Embryophyta
+64,Populus,Embryophyta
+65,Ricinus,Embryophyta
+66,Jatropha,Embryophyta
+67,Selaginella,Embryophyta
+68,Physcomitrella,Embryophyta
+69,Physcomitrella,Embryophyta
+70,Physcomitrella,Embryophyta
+71,Physcomitrella,Embryophyta
+72,Physcomitrella,Embryophyta
+73,Camellia,Embryophyta
+74,Amborella,Embryophyta
+75,Musa,Embryophyta
+76,Musa,Embryophyta
+77,Musa,Embryophyta
+78,Musa,Embryophyta
+79,Musa,Embryophyta
+80,Musa,Embryophyta
+81,Musa,Embryophyta
+82,Brachypodium,Embryophyta
+83,Triticum,Embryophyta
+84,Triticum,Embryophyta
+85,Triticum,Embryophyta
+86,Oryza,Embryophyta
+87,Oryza,Embryophyta
+88,Setaria,Embryophyta
+89,Zea,Embryophyta
+90,Zea,Embryophyta
+91,Sorghum,Embryophyta
+92,Sorghum,Embryophyta
+93,Oryza,Embryophyta
+94,Oryza,Embryophyta
+95,Triticum,Embryophyta
+96,Aegilops,Embryophyta
+97,Triticum,Embryophyta
+98,Puccinellia,Embryophyta
+99,Brachypodium,Embryophyta
+100,Oryza,Embryophyta
+101,Oryza,Embryophyta
+102,Oryza,Embryophyta
+103,Sorghum,Embryophyta
+104,Setaria,Embryophyta
+105,Zea,Embryophyta
+106,Phoenix,Embryophyta
+107,Elaeis,Embryophyta
+108,Elaeis,Embryophyta
+109,Phoenix,Embryophyta
+110,Populus,Embryophyta
+111,Populus,Embryophyta
+112,Populus,Embryophyta
+113,Populus,Embryophyta
+114,Tarenaya,Embryophyta
+115,Arabis,Embryophyta
+116,Camelina,Embryophyta
+117,Camelina,Embryophyta
+118,Capsella,Embryophyta
+119,Arabidopsis,Embryophyta
+120,Brassica,Embryophyta
+121,Eutrema,Embryophyta
+122,Brassica,Embryophyta
+123,Brassica,Embryophyta
+124,Brassica,Embryophyta
+125,Brassica,Embryophyta
+126,Brassica,Embryophyta
+127,Eutrema,Embryophyta
+128,Arabis,Embryophyta
+129,Arabidopsis,Embryophyta
+130,Capsella,Embryophyta
+131,Camelina,Embryophyta
+132,Camelina,Embryophyta
+133,Camelina,Embryophyta
+134,Arabidopsis,Embryophyta
+135,Arabis,Embryophyta
+136,Brassica,Embryophyta
+137,Eutrema,Embryophyta
+138,Brassica,Embryophyta
+139,Capsella,Embryophyta
+140,Arabidopsis,Embryophyta
+141,Arabidopsis,Embryophyta
+142,Arabidopsis,Embryophyta
+143,Camelina,Embryophyta
+144,Lotus,Embryophyta
+145,Medicago,Embryophyta
+146,Medicago,Embryophyta
+147,Cicer,Embryophyta
+148,Phaseolus,Embryophyta
+149,Glycine,Embryophyta
+150,Glycine,Embryophyta
+151,Glycine,Embryophyta
+152,Erythranthe,Embryophyta
+153,Sesamum,Embryophyta
+154,Erythranthe,Embryophyta
+155,Sesamum,Embryophyta
+156,Genlisea,Embryophyta
+157,Malus,Embryophyta
+158,Pyrus,Embryophyta
+159,Malus,Embryophyta
+160,Pyrus,Embryophyta
+161,Prunus,Embryophyta
+162,Prunus,Embryophyta
+163,Cucumis,Embryophyta
+164,Cucumis,Embryophyta
+165,Morus,Embryophyta
+166,Citrus,Embryophyta
+167,Citrus,Embryophyta
+168,Citrus,Embryophyta
+169,Camellia,Embryophyta
+170,Beta,Embryophyta
+171,Alternanthera,Embryophyta
+172,Nicotiana,Embryophyta
+173,Solanum,Embryophyta
+174,Solanum,Embryophyta
+175,Coffea,Embryophyta
+176,Theobroma,Embryophyta
+177,Vitis,Embryophyta
+178,Eucalyptus,Embryophyta
+179,Jatropha,Embryophyta
+180,Ricinus,Embryophyta
+181,Populus,Embryophyta
+182,Citrus,Embryophyta
+183,Coffea,Embryophyta
+184,Nicotiana,Embryophyta
+185,Phaseolus,Embryophyta
+186,Lotus,Embryophyta
+187,Cicer,Embryophyta
+188,Medicago,Embryophyta
+189,Medicago,Embryophyta
+190,Beta,Embryophyta
+191,Populus,Embryophyta
+192,Ricinus,Embryophyta
+193,Theobroma,Embryophyta
+194,Jatropha,Embryophyta
+195,Fragaria,Embryophyta
+196,Malus,Embryophyta
+197,Pyrus,Embryophyta
+198,Prunus,Embryophyta
+199,Prunus,Embryophyta
+200,Eucalyptus,Embryophyta
+201,Cucumis,Embryophyta
+202,Tarenaya,Embryophyta
+203,Eutrema,Embryophyta
+204,Brassica,Embryophyta
+205,Brassica,Embryophyta
+206,Capsella,Embryophyta
+207,Arabidopsis,Embryophyta
+208,Arabidopsis,Embryophyta
+209,Camelina,Embryophyta
+210,Camelina,Embryophyta
+211,Arabis,Embryophyta
+212,Nelumbo,Embryophyta
+213,Nelumbo,Embryophyta
+214,Nelumbo,Embryophyta
+215,Nicotiana,Embryophyta
+216,Solanum,Embryophyta
+217,Solanum,Embryophyta
+218,Coffea,Embryophyta
+219,Erythranthe,Embryophyta
+220,Erythranthe,Embryophyta
+221,Sesamum,Embryophyta
+222,Sesamum,Embryophyta
+223,Sesamum,Embryophyta
+224,Erythranthe,Embryophyta
+225,Jatropha,Embryophyta
+226,Ricinus,Embryophyta
+227,Citrus,Embryophyta
+228,Populus,Embryophyta
+229,Populus,Embryophyta
+230,fabids,Embryophyta
+231,Populus,Embryophyta
+232,Dionaea,Embryophyta
+233,Beta,Embryophyta
+234,Beta,Embryophyta
+235,Nepenthes,Embryophyta
+236,Cucumis,Embryophyta
+237,Cucumis,Embryophyta
+238,Cucumis,Embryophyta
+239,Cucumis,Embryophyta
+240,Fragaria,Embryophyta
+241,Pyrus,Embryophyta
+242,Prunus,Embryophyta
+243,Prunus,Embryophyta
+244,Medicago,Embryophyta
+245,Cicer,Embryophyta
+246,Phaseolus,Embryophyta
+247,Glycine,Embryophyta
+248,Glycine,Embryophyta
+249,Glycine,Embryophyta
+250,Glycine,Embryophyta
+251,Lotus,Embryophyta
+252,Morus,Embryophyta
+253,Vitis,Embryophyta
+254,Eucalyptus,Embryophyta
+255,Eucalyptus,Embryophyta
+256,Eucalyptus,Embryophyta
+257,Tarenaya,Embryophyta
+258,Camelina,Embryophyta
+259,Camelina,Embryophyta
+260,Camelina,Embryophyta
+261,Camelina,Embryophyta
+262,Camelina,Embryophyta
+263,Camelina,Embryophyta
+264,Brassica,Embryophyta
+265,Arabidopsis,Embryophyta
+266,Arabidopsis,Embryophyta
+267,Camelina,Embryophyta
+268,Camelina,Embryophyta
+269,Capsella,Embryophyta
+270,Theobroma,Embryophyta
+271,Theobroma,Embryophyta
+272,Pinus,Embryophyta
+273,Pinus,Embryophyta
+274,Crustomastix,Crustomastix stigmata CCMP3273
+275,Pyramimonas,Pyramimonas ssp.
+276,Pyramimonas,Pyramimonas ssp.
+277,Pyramimonas,Pyramimonas ssp.
+278,Pyramimonas,Pyramimonas ssp.
+279,Pyramimonas,Pyramimonas ssp.
+280,Pyramimonas,Pyramimonas ssp.
+281,Pyramimonas,Pyramimonas ssp.
+282,Pyramimonas,Pyramimonas ssp.
+283,Pyramimonas,Pyramimonas ssp.
+284,Pyramimonas,Pyramimonas ssp.
+285,Pyramimonas,Pyramimonas ssp.
+286,Bathycoccus,Bathycoccus ssp.
+287,Ostreococcus,Ostreococcus
+288,Ostreococcus,Ostreococcus
+289,Ostreococcus,Ostreococcus
+290,Ostreococcus,Ostreococcus
+291,Ostreococcus,Ostreococcus
+292,Ostreococcus,Ostreococcus
+293,Ostreococcus,Ostreococcus
+294,Ostreococcus,Ostreococcus
+295,Ostreococcus,Ostreococcus
+296,Mantoniella,Mantoniella ssp.
+297,Mantoniella,Mantoniella ssp.
+298,Micromonas,Micromonas ssp.
+299,Micromonas,Micromonas ssp.
+300,Micromonas,Micromonas ssp.
+301,Micromonas,Micromonas ssp.
+302,Micromonas,Micromonas ssp.
+303,Micromonas,Micromonas ssp.
+304,Micromonas,Micromonas ssp.
+305,Micromonas,Micromonas ssp.
+306,Micromonas,Micromonas ssp.
+307,Micromonas,Micromonas ssp.
+308,Micromonas,Micromonas ssp.
+309,Micromonas,Micromonas ssp.
+310,Nephroselmis,Nephroselmis pyriformis CCMP717
+311,Tetraselmis,Tetraselmis ssp.
+312,Tetraselmis,Tetraselmis ssp.
+313,Tetraselmis,Tetraselmis ssp.
+314,Tetraselmis,Tetraselmis ssp.
+315,Tetraselmis,Tetraselmis ssp.
+316,Tetraselmis,Tetraselmis ssp.
+317,Tetraselmis,Tetraselmis ssp.
+318,Tetraselmis,Tetraselmis ssp.
+319,Chlamydomonas,Chlamydomonadales
+320,Chlamydomonas,Chlamydomonadales
+321,Chlamydomonas,Chlamydomonadales
+322,Chlamydomonas,Chlamydomonadales
+323,Dunaliella,Chlamydomonadales
+324,Volvox,Chlamydomonadales
+325,Chlamydomonas,Chlamydomonadales
+326,Polytomella,Chlamydomonadales
+327,Polytomella,Chlamydomonadales
+328,Dunaliella,Chlamydomonadales
+329,Dunaliella,Chlamydomonadales
+330,Chlamydomonas,Chlamydomonadales
+331,Volvox,Chlamydomonadales
+332,Chlamydomonas,Chlamydomonadales
+333,Chlamydomonas,Chlamydomonadales
+334,Volvox,Chlamydomonadales
+335,Chlamydomonas,Chlamydomonadales
+336,Volvox,Chlamydomonadales
+337,Volvox,Chlamydomonadales
+338,Polytomella,Chlamydomonadales
+339,Polytomella,Chlamydomonadales
+340,Chlamydomonas,Chlamydomonadales
+341,Chlamydomonas,Chlamydomonadales
+342,Chlamydomonas,Chlamydomonadales
+343,Volvox,Chlamydomonadales
+344,Volvox,Chlamydomonadales
+345,Volvox,Chlamydomonadales
+346,Chlamydomonas,Chlamydomonadales
+347,Chlamydomonas,Chlamydomonadales
+348,Chlamydomonas,Chlamydomonadales
+349,Dunaliella,Chlamydomonadales
+350,Dunaliella,Chlamydomonadales
+351,Dunaliella,Chlamydomonadales
+352,Chlamydomonas,Chlamydomonadales
+353,Chlamydomonas,Chlamydomonadales
+354,Chlorella,Trebouxiophyceae
+355,Picochlorum,Trebouxiophyceae
+356,Picochlorum,Trebouxiophyceae
+357,Helicosporidium,Trebouxiophyceae
+358,Auxenochlorella,Trebouxiophyceae
+359,Auxenochlorella,Trebouxiophyceae
+360,Chlorella,Trebouxiophyceae
+361,Auxenochlorella,Trebouxiophyceae
+362,Coccomyxa,Trebouxiophyceae
+363,Asterochloris,Trebouxiophyceae
+364,Asterochloris,Trebouxiophyceae
