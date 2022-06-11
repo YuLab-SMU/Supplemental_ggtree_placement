@@ -125,8 +125,8 @@ library(colorspace)
 library(dplyr)
 library(patchwork)
 
-tree1 <- read.jplace(file = "../data/rsbl20190182supp2.jplace")
-tree2 <- read.tree(file = "../data/path/rsbl20190182supp7.tre")
+tree1 <- read.jplace(file = "../exampledata/Mitsi/rsbl20190182supp2.jplace")
+tree2 <- read.tree(file = "../exampledata/Mitsi/rsbl20190182supp7.tre")
 tree2 <- as.treedata(tree2)
 
 p1 <- ggtree(tree1,layout = "circular",aes(color=nplace,size=nplace)) +
