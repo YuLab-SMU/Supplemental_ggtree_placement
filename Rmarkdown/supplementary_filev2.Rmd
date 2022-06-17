@@ -37,7 +37,7 @@ usepackage_latex("booktabs")
 
 ## Utility to explore the placement uncertainty
 
-```{r Amt,fig.width=16, fig.height=8, error=FALSE, warning=FALSE, message=FALSE, dev="CairoPNG",dpi=300}
+```{r Amt,fig.width=24, fig.height=10, error=FALSE, warning=FALSE, message=FALSE, dev="CairoPNG",dpi=300}
 
 # Required packages
 library(ggplot2)
@@ -99,9 +99,9 @@ p2 <- p1%<+% Amt_tiplabel +
 
 # viewClade(p1,659) # viewClade不适用于环形树
 tree3 <- tree_subset(tree2, node=657, levels_back=0) 
-p3 <- ggtree(tree3,layout = "rect",aes(color=like_weight_ratio)) +
+p3 <- ggtree(tree3,layout = "rect",aes(color=like_weight_ratio),size=1) +
     scale_color_continuous_sequential(palette = "Sunset",limits =c(0, 1)) +
-    geom_tiplab(size=4) + xlim(0,2)
+    geom_tiplab(size=4,color="black",offset = 0.01) + xlim(0,2)
 
 
 
