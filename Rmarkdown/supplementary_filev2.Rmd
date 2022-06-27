@@ -34,7 +34,75 @@ usepackage_latex("makecell")
 usepackage_latex("booktabs")
 ```
 
+## Favorable placement filtration after parsing jplace file
 
+```{r V4,fig.width=24, fig.height=10, error=FALSE, warning=FALSE, message=FALSE, dev="CairoPNG",dpi=300}
+
+# Required packages
+library(treeio)
+library(ggtree)
+library(jsonlite)
+library(dplyr)
+library(ggtreeExtra)
+library(RColorBrewer)
+library(colorspace)
+library(ggplot2)
+library(aplot)
+
+# Read jplace
+jtree <- fromJSON("../exampledata/Holomycota/HolomycotaV4_alignedtrim.jplace")
+phylo <- treeio:::jplace_treetext_to_phylo(jtree$tree)
+placements <- treeio:::extract.placement(jtree,phylo)
+
+# placement filtering
+filtered_placements <- group_by(placements, .data$name) %>% 
+    filter(.data$like_weight_ratio == max(.data$like_weight_ratio))
+
+
+p1 <- ggplot(data = placements,aes(x=like_weight_ratio)) +
+    geom_histogram(data=filtered_placements,aes(x=like_weight_ratio,..count..),fill="skyblue",  color="white",size=0.1,binwidth = 0.1) +
+    geom_histogram(data=placements,aes(x=like_weight_ratio,..count..),fill="red",  color="black",size=0.1,binwidth = 0.1, alpha=0.5) +
+    labs(y="Number of Placements",x="LWR") +
+    scale_x_continuous(breaks = c(seq(0,1,0.1))) +
+    theme_bw()
+
+tree1 <- as.treedata(phylo)
+td <- as_tibble(tree1)
+tree1@data <- group_by(filtered_placements, .data$node) %>% summarize(nplace=n()) %>%
+    full_join(td, by='node') %>%
+    mutate(nplace = ifelse(is.na(.data$nplace), 0, .data$nplace))
+
+p2 <- ggtree(tree1,layout = "circular",branch.length = "none",aes(color=nplace,size=nplace)) +
+    scale_color_continuous_sequential(palette = "Sunset",limits =c(1, 55)) +
+    scale_size_continuous(range=c(0.1, 2),limits =c(0, 55))
+
+V4_group <- read.csv(file = "../exampledata/Holomycota/V4_group.csv")
+getPalette <- colorRampPalette(brewer.pal(9, "Set1"))
+cols <- getPalette(21)
+levels <- rev(unique(V4_group$group))
+
+p3 <- p2%<+% V4_group + 
+    geom_fruit(
+        geom = geom_tile,
+        mapping = aes(fill = factor(group,levels = levels)),
+        width = 2,
+        offset = 0.1
+    ) +
+    scale_fill_manual(
+        name = "",
+        values = cols,
+        guide = guide_legend(
+            keywidth = 1,
+            keyheight = 1,
+            order = 3
+        ),
+        na.translate = FALSE
+    )
+
+
+plot_list(p1, p3,tag_levels = list(c('(a)', '(b)','(c)','(d)'), '1'), guides = 'collect',tag_size = 20)
+
+```
 ## Utility to explore the placement uncertainty
 
 ```{r Amt,fig.width=24, fig.height=10, error=FALSE, warning=FALSE, message=FALSE, dev="CairoPNG",dpi=300}
