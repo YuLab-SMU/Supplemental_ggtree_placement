@@ -59,12 +59,20 @@ filtered_placements <- group_by(placements, .data$name) %>%
     filter(.data$like_weight_ratio == max(.data$like_weight_ratio))
 
 
-p1 <- ggplot(data = placements,aes(x=like_weight_ratio)) +
-    geom_histogram(data=filtered_placements,aes(x=like_weight_ratio,..count..),fill="skyblue",  color="white",size=0.1,binwidth = 0.1) +
-    geom_histogram(data=placements,aes(x=like_weight_ratio,..count..),fill="red",  color="black",size=0.8,binwidth = 0.1, alpha=0.5) +
-    labs(y="Number of Placements",x="LWR") +
+
+dat <- data.frame(
+    group = c(rep("Before",length(placements$like_weight_ratio)),rep("Filtered",length(filtered_placements$like_weight_ratio))),
+    likelihood_weight_ratio=c(placements$like_weight_ratio,filtered_placements$like_weight_ratio)
+)
+
+
+p1 <- ggplot(data = dat,aes(x=likelihood_weight_ratio)) +
+    geom_histogram(data=dat,aes(x=likelihood_weight_ratio,fill=group,..count..), position = position_dodge(), color="white",size=0.5,binwidth = 0.1) +
+    scale_fill_manual(values = c("#F4CAE0","#ADA7C9")) +
+    labs(y="Number of Placements",x="likelihood weight ratio") +
     scale_x_continuous(breaks = c(seq(0,1,0.1))) +
     theme_bw()
+
 
 tree1 <- as.treedata(phylo)
 td <- as_tibble(tree1)
