@@ -68,7 +68,7 @@ dat <- data.frame(
 
 p1 <- ggplot(data = dat,aes(x=likelihood_weight_ratio)) +
     geom_histogram(data=dat,aes(x=likelihood_weight_ratio,fill=group,..count..), position = position_dodge(), color="white",size=0.5,binwidth = 0.1) +
-    scale_fill_manual(values = c("#F4CAE0","#ADA7C9")) +
+    scale_fill_manual(values = c("#f4a261","#f4d96b")) +
     labs(y="Number of Placements",x="likelihood weight ratio") +
     scale_x_continuous(breaks = c(seq(0,1,0.1))) +
     theme_bw()
