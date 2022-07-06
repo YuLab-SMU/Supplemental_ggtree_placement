@@ -97,7 +97,7 @@ p3 <- p2%<+% V4_group +
         offset = 0.1
     ) +
     scale_fill_manual(
-        name = "",
+        name = "Taxon group",
         values = cols,
         guide = guide_legend(
             keywidth = 1,
