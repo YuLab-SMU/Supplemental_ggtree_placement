@@ -102,29 +102,12 @@ p2 <- ggtree::ggtree(tree1, layout = "circular", branch.length = "none", aes(col
 # Read group information from CSV file
 V4_group <- read.csv(file = "../exampledata/Holomycota/V4_group.csv")
 
-# Define color palette
 cols <- c(
-  "#E41A1C",  
-  "#9E425A",  
-  "#596A98",  
-  "#3B87A2",  
-  "#449B75",  
-  "#4DAF4A",  
-  "#6B886D",  
-  "#7B68EE",  
-  "#FF6F61",  
-  "#FF8C00",  
-  "#81c581",  
-  "#FF4500",  
-  "#87CEEB", 
-  "#C71585",  
-  "#C67171", 
-  "#A65628",  
-  "#D36477",  
-  "#D15FEE",  
-  "#B46B9B",  
-  "#A07EAB", 
-  "#707070"  
+  "#3B87A2", "#D15FEE", "#C71585", "#9E425A", "#87CEEB", 
+  "#4DAF4A", "#E41A1C", "#FF4500", "#FF8C00", "#A65628", 
+  "#449B75", "#6B886D", "#D36477", "#7B68EE", "#A07EAB", 
+  "#B46B9B", "#FF6F61", "#C67171", "#81c581", "#596A98", 
+  "#707070"
 )
 
 # Get unique levels of the group and reverse the order
@@ -188,7 +171,7 @@ sgplacement <- dplyr::group_by(placements, .data$name) %>%
 
 # Convert phylo object to treedata format
 tree1 <- treeio::as.treedata(phylo)
-
+tree1@phylo$tip.label <- gsub("Ostreococcus", "Os", tree1@phylo$tip.label)
 # Join filtered placements with the tree data by node
 tree2 <- dplyr::left_join(tree1, sgplacement, by = "node")
 
@@ -241,34 +224,31 @@ p2 <- p1 %<+% Amt_tiplabel +
 # Create a subset of the tree for a specific node
 tree3 <- tidytree::tree_subset(tree2, node = 657, levels_back = 0) 
 
-# Plot the subsetted tree using a rectangular layout, colored by likelihood weight ratio
-p3 <- ggtree::ggtree(tree3, layout = "rect", aes(color = like_weight_ratio), size = 1) +
-    colorspace::scale_color_continuous_sequential(palette = "Sunset", limits = c(0, 1)) +
-    geom_tiplab(size = 4, color = "black", offset = 0.01) + 
-    xlim(0, 2)
+# Replace "Ostreococcus" with "Os"
+tree3@phylo$tip.label <- gsub("Ostreococcus", "Os", tree3@phylo$tip.label)
 
 # Set options to avoid scientific notation in plot labels
 options(scipen = 200)
 
 # Round the likelihood weight ratio values and convert them to character for labeling
-tree3@extraInfo[, 5] <- tree3@extraInfo[, 5] |> 
+tree3@extraInfo[, 9] <- tree3@extraInfo[, 9] |> 
     as.vector() |> 
     unlist() |> 
     as.numeric() |> 
-    round(digits = 4) |> 
-    as.character()
+    round(digits = 5) 
 
-# Plot the subsetted tree with additional labels and adjustments
-p4 <- ggtree(tree3, layout = "rect", size = 1) +
+# Plot the subsetted tree using a rectangular layout, colored by posterior probabilities
+p3 <- ggtree::ggtree(tree3, layout = "rect", aes(color = post_prob), size = 1) +
     colorspace::scale_color_continuous_sequential(palette = "Sunset", limits = c(0, 1)) +
-    geom_tiplab(size = 3, color = "black", align = TRUE, offset = 0) + 
+    geom_tiplab(size = 3, color = "black",align=T) + 
+    xlim(0, 2)+
+     geom_tiplab(size = 3, color = "black",align = T) + 
     xlim(0, 2) +
-    geom_label2(aes(x = branch, label = like_weight_ratio), color = 'blue', fill = "green", size = 2.5)
+    geom_label2(aes(x = branch, label = post_prob), color = 'black', fill = "#dcb1e2af", size =2)
 
-# Combine the plots p2, p3, and p4 into a single multi-panel plot
-aplot::plot_list(p2, p3, p4, ncol = 2, nrow = 2,
-          tag_levels = list(c('(a)', '(b)', '(c)')), 
-          tag_size = 20, design = "ABBB\nABBB\nCCCC\nCCCC")
+
+aplot::plot_list(p2, p3, 
+          tag_levels = list(c('(a)', '(b)')),design = "ABB\nABB")
 
 
 ```
