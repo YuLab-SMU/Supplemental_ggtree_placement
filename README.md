@@ -49,8 +49,10 @@ Contains data for a specific subtree analysis.
 This directory contains PDF files of the figures generated from the
 analysis.
 
-- **`Fig1.pdf`**, **`Fig2.pdf`**, **`Fig3.pdf`**: Figures representing
-  various visualizations of the phylogenetic analysis.
+- **`Fig1.pdf`**Workflow diagram of treeio and ggtree in processing
+  phylogenetic placement data, **`Fig2.pdf`**,
+  **`Fig3.pdf`**,**`Fig4.pdf`**: Figures representing various
+  visualizations of the phylogenetic analysis.
 
 ------------------------------------------------------------------------
 
@@ -71,8 +73,21 @@ supplementary files for the project.
 This directory contains TIFF versions of the figures for high-quality
 image export.
 
-- **`Fig1.tiff`**, **`Fig2.tiff`**, **`Fig3.tiff`**: High-resolution
+- **`Fig2.tiff`**, **`Fig3.tiff`**, **`Fig4.tiff`**: High-resolution
   images of the figures in TIFF format.
+
+------------------------------------------------------------------------
+
+## 5. `simulated_data`
+
+This directory contains files and scripts for simulated data analysis.
+
+- **`generate_simulate_jplace_data.r`**: R script used to generate
+  simulated `.jplace` data files.
+- **`test_jp_1k.jplace`**, **`test_jp_10k.jplace`**,
+  **`test_jp_50k.jplace`**, **`test_jp_100k.jplace`**: `.jplace` format
+  files of various sizes, used for testing and validation of data
+  analysis workflows.
 
 ------------------------------------------------------------------------
 
