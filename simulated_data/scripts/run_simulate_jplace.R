@@ -2,7 +2,7 @@ library(ggtree)
 library(treeio)
 library(tidytree)
 library(jsonlite)
-options(digits=100)
+options(digits=10)
 source('../src/simulated_jplace_file.R')
 
 
