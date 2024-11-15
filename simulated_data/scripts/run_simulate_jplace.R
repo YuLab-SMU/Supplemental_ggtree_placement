@@ -5,7 +5,6 @@ library(jsonlite)
 options(digits=10)
 source('../src/simulated_jplace_file.R')
 
-
 tips <- c(1000, 10000, 50000, 100000)
 place_nrows <- c(1000, 10000, 100000, 1000000)
 for (i in tips){
