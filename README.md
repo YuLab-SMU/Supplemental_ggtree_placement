@@ -53,6 +53,9 @@ analysis.
   phylogenetic placement data, **`Fig2.pdf`**,
   **`Fig3.pdf`**,**`Fig4.pdf`**: Figures representing various
   visualizations of the phylogenetic analysis.
+  **`FigS1.pdf`**:Supplementary figure showing detailed performance
+  evaluations of treeio, including runtime and memory efficiency when
+  processing large phylogenetic trees with diverse placement scenarios.
 
 ------------------------------------------------------------------------
 
@@ -82,12 +85,36 @@ image export.
 
 This directory contains files and scripts for simulated data analysis.
 
-- **`generate_simulate_jplace_data.r`**: R script used to generate
-  simulated `.jplace` data files.
-- **`test_jp_1k.jplace`**, **`test_jp_10k.jplace`**,
-  **`test_jp_50k.jplace`**, **`test_jp_100k.jplace`**: `.jplace` format
-  files of various sizes, used for testing and validation of data
-  analysis workflows.
+- **`scripts`**  
+  Contains R scripts for generating and visualizing simulated data:
+  - **`plot_simulated_jplace.R.r`**: Script for visualizing simulated
+    `.jplace` files.  
+  - **`run_simulate_jplace.R`**: Script for generating simulated
+    `.jplace` data.
+- **`simulated_jplace`**  
+  Contains simulated `.jplace` files with different configurations:
+  - **`simulate_tips100000_placement_nrow_1000000.jplace`**  
+  - **`simulate_tips100000_placement_nrow_100000.jplace`**  
+  - **`simulate_tips100000_placement_nrow_10000.jplace`**  
+  - **`simulate_tips100000_placement_nrow_1000.jplace`**  
+  - (and others with similar naming patterns).
+- **`src`**  
+  Contains alternative versions of scripts for generating and
+  visualizing simulated data:
+  - **`plot_simulated_jplace.R.r`**  
+  - **`run_simulate_jplace.R`**
+- **Other Files**  
+  Test `.jplace` files with different sample sizes and row
+  configurations for validation:
+  - **`test_jp_1k_1kp.jplace`**, **`test_jp_1k_10kp.jplace`**,
+    **`test_jp_1k_100kp.jplace`**, **`test_jp_1k_1000kp.jplace`**  
+  - **`test_jp_10k_1kp.jplace`**, **`test_jp_10k_10kp.jplace`**,
+    **`test_jp_10k_100kp.jplace`**, **`test_jp_10k_1000kp.jplace`**  
+  - **`test_jp_50k_1kp.jplace`**, **`test_jp_50k_10kp.jplace`**,
+    **`test_jp_50k_50kp.jplace`**, **`test_jp_50k_100kp.jplace`**  
+  - **`test_jp_100k_1kp.jplace`**, **`test_jp_100k_10kp.jplace`**,
+    **`test_jp_100k_50kp.jplace`**, **`test_jp_100k_100kp.jplace`**  
+  - (and others with similar naming patterns).
 
 ------------------------------------------------------------------------
 
