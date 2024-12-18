@@ -90,15 +90,15 @@ tree1@data <- dplyr::group_by(filtered_placements, .data$node) %>%
 
 # Use ggtree to plot a circular tree, adjusting node color and size based on the number of placements
 p2 <- ggtree::ggtree(tree1, layout = "circular", branch.length = "none", aes(color = nplace, size = nplace)) +
-    colorspace::scale_color_continuous_sequential(palette = "Sunset", limits = c(1, 55)) +
+    colorspace::scale_color_continuous_sequential(palette = "Sunset",limits=c(0.1,50),breaks=seq(0.1,50,length.out=6),label=seq(0,50,10)) +
     scale_size_continuous(range = c(0.1, 2), limits = c(0, 55),
         guide = guide_legend(reverse = TRUE)) +
     theme(
         legend.position = "right",  
         legend.box = "horizontal",  
         legend.box.just = "left"  
-    )
-
+    ) 
+p2
 # Read group information from CSV file
 V4_group <- read.csv(file = "../exampledata/Holomycota/V4_group.csv")
 
@@ -345,10 +345,18 @@ p2 <- ggtree::ggtree(tree5, layout = "circular") +
             size = like_weight_ratio     # Size branches based on likelihood weight ratio
         )
     ) +
-    colorspace::scale_color_continuous_sequential(palette = "Sunset", limits = c(0.000001, 0.2)) +  # Set color scale
-    scale_size_continuous(range = c(0, 1.5), guide = guide_legend(reverse = TRUE)) +  # Scale size of branches
+    colorspace::scale_color_continuous_sequential(
+        palette = "Sunset", 
+        limits = c(0.000001, 0.125),
+        breaks=c(0.000001,0.025,0.050,0.075,0.100,0.125),
+        labels=c(0,0.025,0.050,0.075,0.100,0.125)) +  # Set color scale
+    scale_size_continuous(
+        range = c(0.5, 1.5), 
+        guide = guide_legend(reverse = TRUE,
+        breaks=c(0,0.025,0.050,0.075,0.100,0.125),
+        labels=c(0,0.025,0.050,0.075,0.100,0.125))) +  # Scale size of branches
     ggtree::geom_tiplab2(data = td_filter(like_weight_ratio > 0), align = TRUE, size = 3, offset = 0.1)  # Label tips with a filter on likelihood weight ratio
-
+p2
 # Scale the clade for specific nodes
 p3 <- ggtree::scaleClade(p2, 
            node = c(MRCA(tree5, "SA_OTU14871", "SA_OTU158753")), 
@@ -369,4 +377,3 @@ p5 <- p4 +
 # Display the final plot
 p5
 ```
-
